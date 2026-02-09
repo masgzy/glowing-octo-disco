@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 36
+    buildToolsVersion "33.0.0"
+
+    defaultConfig {
+        applicationId "com.kryp.test"
+        minSdkVersion 19
+        targetSdkVersion 36
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"]);
+    
+    // Shizuku API
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    
+    // Google ML Kit 文字识别 (中文)
+    implementation 'com.google.mlkit:text-recognition-chinese:16.0.0'
+}

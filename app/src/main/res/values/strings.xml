@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">连点器</string>
+    <string name="accessibility_service_description">连点器无障碍服务，用于辅助屏幕操作和坐标选择</string>
+</resources>
